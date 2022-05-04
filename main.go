@@ -2,20 +2,10 @@ package main
 
 import "fmt"
 
-type User struct {
-	name     string
-	lastName string
-	age      int
-}
-
-type SuperUser struct {
-	user    User
-	isSuper bool
-}
-
 func main() {
-	user := User{name: "John", lastName: "Travolta", age: 44}
-	sUser := SuperUser{user: user, isSuper: true}
+	a := make(map[int][]string)
+	a[1] = []string{`John`, `Maria`, `Carlo`}
+	a[0] = []string{`Johnny`, `Mariana`, `Carlos`}
 
-	fmt.Printf("user: %v\nsUser: %v", user, sUser)
+	fmt.Print(a[0])
 }
